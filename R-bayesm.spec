@@ -4,15 +4,13 @@
 #
 Name     : R-bayesm
 Version  : 3.1.1
-Release  : 16
+Release  : 17
 URL      : https://cran.r-project.org/src/contrib/bayesm_3.1-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/bayesm_3.1-1.tar.gz
 Summary  : Bayesian Inference for Marketing/Micro-Econometrics
 Group    : Development/Tools
 License  : GPL-2.0+
 Requires: R-bayesm-lib = %{version}-%{release}
-Requires: R-Rcpp
-Requires: R-RcppArmadillo
 BuildRequires : R-Rcpp
 BuildRequires : R-RcppArmadillo
 BuildRequires : buildreq-R
@@ -36,10 +34,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1549256318
+export SOURCE_DATE_EPOCH=1549272250
 
 %install
-export SOURCE_DATE_EPOCH=1549256318
+export SOURCE_DATE_EPOCH=1549272250
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
