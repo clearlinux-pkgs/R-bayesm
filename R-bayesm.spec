@@ -4,7 +4,7 @@
 #
 Name     : R-bayesm
 Version  : 3.1.4
-Release  : 33
+Release  : 34
 URL      : https://cran.r-project.org/src/contrib/bayesm_3.1-4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/bayesm_3.1-4.tar.gz
 Summary  : Bayesian Inference for Marketing/Micro-Econometrics
@@ -12,10 +12,10 @@ Group    : Development/Tools
 License  : GPL-2.0+
 Requires: R-bayesm-lib = %{version}-%{release}
 Requires: R-Rcpp
+Requires: R-RcppArmadillo
 BuildRequires : R-Rcpp
 BuildRequires : R-RcppArmadillo
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
 in marketing and micro-econometrics applications.
@@ -30,21 +30,22 @@ lib components for the R-bayesm package.
 
 %prep
 %setup -q -c -n bayesm
+cd %{_builddir}/bayesm
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571799311
+export SOURCE_DATE_EPOCH=1589411982
 
 %install
-export SOURCE_DATE_EPOCH=1571799311
+export SOURCE_DATE_EPOCH=1589411982
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
