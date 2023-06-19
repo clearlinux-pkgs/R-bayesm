@@ -4,7 +4,7 @@
 #
 Name     : R-bayesm
 Version  : 3.1.5
-Release  : 57
+Release  : 58
 URL      : https://cran.r-project.org/src/contrib/bayesm_3.1-5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/bayesm_3.1-5.tar.gz
 Summary  : Bayesian Inference for Marketing/Micro-Econometrics
